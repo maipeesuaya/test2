@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>愛犬モコ-特徴</title>
+  <meta name="desciption" content="我が愛犬モコについて">
+</head>
+
+<body>
+  <div id="mydog" class="big-bg3">
+    <header class="page-header">
+      <label for="open-close">
+        <nav>
+          <input type="checkbox" id="open-close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <nav id="nav">
+            <ul class="main-nav">
+              <li><a href="index.html">ホームへ戻る</a></li>
+              <li><a href="profile.html">プロフィール</a></li>
+              <li><a href="episode.html">エピソード</a></li>
+              <li><a href="cutepoint.html">可愛いところ</a></li>
+              <li><a href="moko-countdown.html">カウントダウン</a></li>
+              <li><a href="mydog.html">特徴</a></li>
+              <li><a href="moko-photo.html">モコの写真一覧</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </nav>
+      </label>
+    </header>
+    <div id="wrapper">
+
+      <div class="mydog-content">
+        <h1 class="page-title">モコの特徴</h1>
+        <h2>プロフィールや可愛い所で挙げたものの他にモコの特徴を紹介します</h2>
+        <article class="upper-roman">
+          <h3>特徴</h3>
+          <ol id="list">
+
+          </ol>
+        </article>
+        <article class="lower-roman">
+          <h3>すごいなと思う特徴</h3>
+          <ol id="marker">
+
+          </ol>
+        </article>
+      </div>
+
+    </div><!-- #mydog -->
+  </div>
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy;2021年愛犬モコ</small></p>
+    </div>
+  </footer>
+  <script src="script/script.js"></script>
+  <script>
+    'use strict';
+
+    const mokopoint = ['家族の中では母が１番好き', 'テレビに興味津々', '洋服を着るのが好き',
+      '私たちがテレビで動物の赤ちゃんなどを見て可愛いというとヤキモチをやいて文句を言う',
+      '私や母がスマホでゲームをしているとスマホと私や母の間に割り込んで邪魔をしてくる',
+      '人見知りならぬ、犬見知り', '自分より大きい犬には向かっていけない', '前足で耳をかく,邪魔をするときに間に割り込んでくるなど,行動がネコっぽい',
+      '自分と同じか自分より小さい犬にはあいさつに行く', '男性と比べると女性のほうが好き',
+      'たとえ危険生物だったとしても画面越しの動物には強気', '母のことが1番好きなので母が家族の誰かと一緒に散歩に連れて行くと必ず母のほうを何度も振り向き帰ろうとしない'
+    ];
+
+    for (let item of mokopoint) {
+      const li = `<li>${item}</li>`;
+      document.getElementById('list').insertAdjacentHTML('beforeend', li);
+    }
+
+
+    const sugoi = ['ご飯、散歩、お風呂の言葉をわかっている', 'ご飯の時間をわかっている',
+      'おやつを入れるタイプのおもちゃは転がして遊ぶのではなく、舌と前足を使って器用に開けて出そうとする',
+      'テレビを突こうとするのを防ぐために即席で作った柵に前足の筋肉と後ろ足を使って乗っかったり、勢い余って柵を超えたりする'
+
+    ];
+    for (let item of sugoi) {
+      const li = `<li>${item}</li>`;
+      document.getElementById('marker').insertAdjacentHTML('beforeend', li);
+    }
+
+  </script>
+</body>
+
+</html>

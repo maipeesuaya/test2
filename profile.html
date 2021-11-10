@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>愛犬モコ-プロフィール</title>
+</head>
+
+<body>
+  <div id="profile">
+    <header class="page-header">
+      <label for="open-close">
+        <nav>
+          <input type="checkbox" id="open-close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <nav id="nav">
+            <ul class="main-nav">
+              <li><a href="index.html">ホームへ戻る</a></li>
+              <li><a href="profile.html">プロフィール</a></li>
+              <li><a href="episode.html">エピソード</a></li>
+              <li><a href="cutepoint.html">可愛いところ</a></li>
+              <li><a href="moko-countdown.html">カウントダウン</a></li>
+              <li><a href="mydog.html">特徴</a></li>
+              <li><a href="moko-photo.html">モコの写真一覧</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </nav>
+      </label>
+    </header>
+    <div id="wrapper">
+
+      <div class="profile-content wrapper">
+        <h1 class="page-title">MOKO's profile</h1>
+        <div class="table-content">
+          <table class="produce-content">
+            <tr>
+              <th id="title"></th>
+              <td id="contents"></td>
+            </tr>
+            <tr>
+              <th id="title2"></th>
+              <td id="contents2"></td>
+            </tr>
+            <tr>
+              <th id="title3"></th>
+              <td id="contents3"></td>
+            </tr>
+            <tr>
+              <th id="title4"></th>
+              <td id="contents4"></td>
+            </tr>
+            <tr>
+              <th id="title5"></th>
+              <td id="contents5"></td>
+            </tr>
+            <tr>
+              <th id="title6"></th>
+              <td id="contents6"></td>
+            </tr>
+            <tr>
+              <th id="title7"></th>
+              <td id="contents7"></td>
+            </tr>
+            <tr>
+              <th id="title8"></th>
+              <td id="contents8"></td>
+            </tr>
+            <tr>
+              <th id="title9"></th>
+              <td id="contents9"></td>
+            </tr>
+
+
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy;2021年愛犬モコ</small></p>
+    </div>
+  </footer>
+  <script src="script/script.js"></script>
+  <script>
+    'use strict';
+
+    let mokoname = { title: '名前', contents: 'モコ' };
+    let mokoaishou = { title2: '愛称', contents2: 'モコみん,モコシー,ネコすけ,モコすけ,モコわん' };
+    let mokoseinengappi = { title3: '生年月日', contents3: '2019年6月18日' };
+    let mokoienikita = { title4: '我が家に来た日', contents4: '2019年8月10日' };
+    let mokoyurai = { title5: '由来', contents5: 'うさぎみたいに口をモコモコさせているから(命名:母)' };
+    let mokokenshu = { title6: '犬種', contents6: 'ウエストハイランドホワイトテリア(通称:ウエスティ)' };
+    let mokoseikaku = { title7: '性格', contents7: '甘えんぼ,気が強い,お転婆,ヤキモチやき,好奇心旺盛' };
+    let mokosuki = { title8: '好き', contents8: '白米,納豆(味付けなし),イチゴ,散歩(夕方派),お風呂(湯船につかる)' };
+    let mokokirai = { title9: '嫌い', contents9: '掃除機の音,ドライヤー,耳掃除,車やターレなどの大きい音が鳴るもの' };
+
+    document.getElementById('title').textContent = mokoname.title;
+    document.getElementById('contents').textContent = mokoname.contents;
+    document.getElementById('title2').textContent = mokoaishou.title2;
+    document.getElementById('contents2').textContent = mokoaishou.contents2;
+    document.getElementById('title3').textContent = mokoseinengappi.title3;
+    document.getElementById('contents3').textContent = mokoseinengappi.contents3;
+    document.getElementById('title4').textContent = mokoienikita.title4;
+    document.getElementById('contents4').textContent = mokoienikita.contents4;
+    document.getElementById('title5').textContent = mokoyurai.title5;
+    document.getElementById('contents5').textContent = mokoyurai.contents5;
+    document.getElementById('title6').textContent = mokokenshu.title6;
+    document.getElementById('contents6').textContent = mokokenshu.contents6;
+    document.getElementById('title7').textContent = mokoseikaku.title7;
+    document.getElementById('contents7').textContent = mokoseikaku.contents7;
+    document.getElementById('title8').textContent = mokosuki.title8;
+    document.getElementById('contents8').textContent = mokosuki.contents8;
+    document.getElementById('title9').textContent = mokokirai.title9;
+    document.getElementById('contents9').textContent = mokokirai.contents9;
+  </script>
+</body>
+
+</html>

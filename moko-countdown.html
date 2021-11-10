@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>愛犬モコ-次の誕生日までのカウントダウン</title>
+</head>
+
+<body>
+  <div id="countdown">
+    <header class="page-header">
+      <label for="open-close">
+        <nav>
+          <input type="checkbox" id="open-close">
+          <span></span>
+          <span></span>
+          <span></span>
+          <nav id="nav">
+            <ul class="main-nav">
+              <li><a href="index.html">ホームへ戻る</a></li>
+              <li><a href="profile.html">プロフィール</a></li>
+              <li><a href="episode.html">エピソード</a></li>
+              <li><a href="cutepoint.html">可愛いところ</a></li>
+              <li><a href="moko-countdown.html">カウントダウン</a></li>
+              <li><a href="mydog.html">特徴</a></li>
+              <li><a href="moko-photo.html">モコの写真一覧</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </nav>
+      </label>
+    </header>
+    <div id="wrapper">
+      <article>
+        <div class="countdown-content">
+          <h1 class="page-title">モコの誕生日まであと…</h1>
+          <p>モコはすくすく成長し、大きな病気をすることもなく、今年の誕生日で2歳になりました。つまり、</p>
+          <h2>来年、モコは3歳。その誕生日の6月18日まで</h2>
+          <p class="timer">あと<span id="day"></span>日
+            <span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒
+            となります。
+          </p>
+        </div>
+      </article>
+      <div class="moko">
+        <img src="images/firstmoko.jpg" alt="" id="chiisaimoko">
+        <img src="images/pinkarrow.png" alt="" id="yajirushi">
+        <img src="images/seichou.jpg" alt="" id="ookikunatta">
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="wrapper">
+      <p><small>&copy;2021年愛犬モコ</small></p>
+    </div>
+  </footer>
+  <script src="script/script.js"></script>
+  <script>
+    'use strict';
+
+    function countdown(due) {
+      const now = new Date();
+      const rest = due.getTime() - now.getTime();
+      const sec = Math.floor(rest / 1000) % 60;
+      const min = Math.floor(rest / 1000 / 60) % 60;
+      const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+      const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+      const count = [days, hours, min, sec];
+
+      return count;
+    }
+
+    const newbirthday = new Date(2022, 5, 18);
+
+    function recalc() {
+      const counter = countdown(newbirthday);
+      document.getElementById('day').textContent = counter[0];
+      document.getElementById('hour').textContent = counter[1];
+      document.getElementById('min').textContent = String(counter[2]).
+        padStart(2, '0');
+      document.getElementById('sec').textContent = String(counter[3]).
+        padStart(2, '0');
+      refresh();
+    }
+
+    function refresh() {
+      setTimeout(recalc, 1000);
+    }
+    recalc();
+    //モコの小さい頃の写真をクリックしたらやじるし画像がフェードイン
+    $(function () {
+      $('#chiisaimoko').on('click', function () {
+        $('#yajirushi').fadeIn(1000);
+      })//矢印画像をクリックしたらモコの成長写真がフェードイン
+      $('#yajirushi').on('click', function () {
+        $('#ookikunatta').fadeIn(2000);
+      })
+
+    });
+
+  </script>
+</body>
+
+</html>

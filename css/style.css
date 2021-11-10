@@ -1,0 +1,806 @@
+@charset "utf-8"
+
+html {
+font-size: 100%;
+}
+
+body {
+  font-family: "Yu Mincho","YuMincho",serif;
+  line-height: 1.8;
+  color: #432;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+
+/* 見出し */
+.page-title {
+  font-size: 3.125rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  background: #CCFFFF;
+}
+
+#open-close {
+  display: none;/* 子孫要素も含めて表示をなしにするため
+  子孫要素を呼び出したいときに別で編集して呼び出すことが出来ない*/
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.5rem;
+  background: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+
+
+
+.main-nav li {
+  margin-right: 10px;
+  
+  border-bottom: 2px solid #f00;
+ }
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover {
+  color: #a52;
+}
+
+
+
+#home {
+  background-image: url(../images/autum2.jpg);
+  min-height: 100vh;
+}
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+
+}
+
+
+.home-content {
+  text-align: center;
+  margin-top: 25px;
+  color: #432;
+}
+
+
+
+
+/* ここからプロフィールページ */
+
+
+
+#profile {
+  background: #f5deb3;
+  min-height: 100vh;
+  font-family: 'Merriweather:wght@300&display=swap',serif;
+
+}
+
+#profile  .main-nav li {
+  background: none;
+}
+
+
+
+#profile .page-title {
+  text-align: center;
+  font-family: 'Merriweather:wght@300&display=swap',serif;
+  color: #432;
+}
+
+
+/* .table-content {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+
+.produce-content {
+  width: 100%;
+  border: 5px solid #008800;
+  color: #000;
+text-align: center;
+
+}
+
+
+.produce-content th,
+.produce-content td {
+  border-bottom: 4px solid #008800;
+  font-size: 1.5rem;
+}
+
+.produce-content td {
+  border-left: 3px solid #008800;
+}
+#title9,
+#contents9 {
+  border-bottom: none;
+}
+
+
+
+footer {
+  background: #CCFFFF;
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: #f00;
+}
+
+
+#episode {
+  background: #adff2f;
+  min-height: 100vh;
+  font-family: 'Merriweather:wght@300&display=swap',serif;
+}
+
+
+
+#episode .page-title {
+  color: #00008b;
+}
+
+
+
+
+.text-content {
+  margin-top: 30px;
+  border-bottom: 2px #0bd solid;
+  text-align: center;
+}
+
+
+/* #moko-content,
+#sleep-content,
+#deepsleep-content,
+#gappi-content ,
+#mimidachi-moko,
+#very-otenba-content,
+#torimingbefore,
+#toriming-content,
+#cake,
+#birthday-content,
+#sobad-content,
+#sobadcontent2,
+#badcontent {
+  width: 600px;
+  height: 600px;
+  box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
+  animation: fadeImg 0.8s;
+} */
+
+
+.slide img {
+  width: 600px;
+  height: 400px;
+}
+
+
+/* .text-content {
+  display: flex;
+} */
+
+
+
+.slide {
+  margin: 0 auto;
+  border: 1px solid #0bd;
+  width: 600px;
+  background-color: #0bd;
+}
+
+@keyframes fadeImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.toolbar {
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #0bd;
+}
+
+#prev {
+  margin-right: 0.5rem;
+  width: 15px;
+  height: 15px;
+  background: url(../images/arrow-left.svg) no-repeat;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+#prev:hover {
+  transform: translateX(-10px) scale(1.2);
+}
+
+#page {
+  color: yellow;
+}
+
+#next {
+  margin-left: 0.5rem;
+  width: 15px;
+  height: 15px;
+  background: url(../images/arrow-right.svg) no-repeat;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+#next:hover {
+  transform: translateX(10px) scale(1.2);
+}
+
+
+
+
+
+
+
+#cutepoint,
+#toobad {
+  background: #ffff66;
+  min-height: 100vh;
+  font-family: 'Merriweather:wght@300&display=swap',serif;
+  color: #000;
+}
+
+#cutepoint .page-title,
+#toobad .page-title {
+  font-size: 2.5rem;
+}
+
+#cutepoint h2,
+#toobad h2 {
+  font-size: 1.5rem;
+}
+
+
+
+#cutepoint ol {
+  margin-bottom: 30px;
+}
+
+.button {
+  font-size: 1.125rem;
+  background-color: #0bd;
+  color: #ff0;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.button:hover {
+  background-color: #00f;
+}
+
+.cutepoint-content,
+.toobad-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+#cutepoint article {
+  width: 75%;
+  margin-left: 20px;
+}
+
+.view-content {
+  position: relative;
+  padding: 4px;
+  margin-bottom: 30px;
+}
+
+#cutepoint .view-content li {
+  font-size: 1rem;
+}
+
+#toobad article {
+  width: 75%;
+}
+
+h4::before {
+  content: "❀";
+  color: #ff69b4;
+}
+
+
+
+.toobad-content {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+
+.toobad-content .button {
+  display: flex;
+  font-size: 1.125rem;
+  background: #00f;
+  color: #ff0;
+  border-radius: 5px;
+  padding: 15px 30px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background: #00008b
+}
+
+.sub-title {
+  font-size: 1rem;
+  padding: 0 5px 5px;
+  margin-top: 10px;
+  border-bottom: 2px solid #000;
+  text-align: center;
+  font-weight: normal;
+}
+
+aside {
+  width: 15%;
+}
+
+.aside p {
+  padding: 12px 10px;
+  font-size: 0.9rem;
+  display: flex;
+
+}
+
+.sub-content {
+  margin-bottom: 50px;
+  border-bottom: 2px #0bd;
+  list-style: none;
+}
+
+.sub-content li {
+  border-bottom: 1px solid #432;
+
+}
+
+.sub-content a {
+  color: #432;
+}
+
+.sub-content a:hover {
+  color: #a52;
+}
+
+
+
+#countdown {
+  background: #7fffd4;
+  min-height: 100vh;
+}
+
+.moko {
+  text-align: center;
+}
+
+#yajirushi {
+  display: none;
+margin-bottom: 70px;
+}
+
+.countdown-content {
+  display: block;
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-top: 20px;
+ 
+}
+
+#ookikunatta {
+  display: none;
+}
+ 
+
+
+
+#mydog {
+  background-image: url(../images/moko_face.jpg);
+  font-family: 'Merriweather:wght@300&display=swap',serif;
+  min-height: 100vh;
+}
+
+#mydog .main-nav li {
+  background: none;
+}
+
+.big-bg3 {
+  background-size: cover;
+  background-position: center top;
+}
+#list {
+  margin-left: 30px;
+  list-style-type: upper-roman;
+  margin-bottom: 20px;
+}
+
+.mydog-content li {
+  font-size: 1.5rem;
+  color: #00008b;
+width: 100%;
+}
+
+
+#mydog h3::before {
+  content: "◎";
+  color: #f00;
+}
+
+#mydog h3 {
+  border-bottom: 1px solid #f00;
+}
+
+
+#marker  {
+  margin-left: 30px;
+  list-style-type: lower-roman;
+  color: #fff;
+}
+
+#moko-photo {
+  background: #ffa07a;
+  min-height: 100vh;
+}
+
+#moko-photo .page-header {
+  background: #CCFFFF;
+}
+
+.mainphoto {
+  max-width: 100%;
+}
+
+.center {
+  margin: 0 auto 0 auto;
+  max-width: 90%;
+  width: 700px;
+
+}
+
+#moko-photo ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+ 
+}
+
+
+
+li {
+  flex: 1 1 auto;
+  margin-right: 6px;
+}
+
+li:last-of-type {
+  margin-left: 0;
+}
+
+
+#contact {
+  background-image:url(../images/toriming2.jpg);
+  min-height: 100vh;
+  color: #fff
+}
+
+.big-bg2 {
+  background-size: cover;
+  background-position: center top;
+}
+
+#contact .page-title {
+  color: #fff;
+}
+
+
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.175rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+textarea {
+  background: rgba(255,255,255,.5);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 150%;
+  max-width: 480px;
+  height: 5rem;
+  resize: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  line-height: 1;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+  .page-title {
+      font-size: 2.5rem;
+    }
+
+.page-header {
+  background: none;
+}
+
+    nav {
+      width: 35px;
+      height: 35px;
+      background-color: rgba(255,255,255,.5);
+      border-radius: 7px;
+      cursor: pointer;/* マウスポイントするとカーソルが指マークになる*/
+      position: fixed;
+      top: 15px;/* ブラウザ上端から10px離れたところ */
+      right: 15px;/* ブラウザ右端から10px離れたところ */
+    }
+    /* 3本線の共通デザイン*/
+    
+    nav span,
+    nav span::before,
+    nav span::after {
+      width: 30px;
+      height: 3px;
+      background-color: gray;
+      display: block;
+      content: "";
+      position: absolute;/* 絶対値で配置する*/
+      top: 2.5px;
+      left: 2.5px;
+    }
+    /* 2本目の線(位置合わせ)*/
+    nav span::before {
+      top: 13px;
+      left: 0;
+    }
+    /* 3本目の線(位置合わせ)*/
+    nav span::after {
+      top: 26px;/* navの左上角を基準に*/
+      left: 0;/* navの左上角を基準に*/
+    }
+
+  
+
+    #nav{
+     width: 200px;
+      height: 100%;
+      top: 0;
+      position: fixed;
+      right: -200px;
+      background: rgba(255,255,255,.5);
+    }
+
+    .main-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+      margin-left: 15px;
+      list-style-type: none;
+      background: none;  
+    }
+
+    
+  
+.show {
+  transform: translateX(-200px);
+}
+
+#wrapper,
+#nav {
+  transition: transform 1s;
+}
+
+
+    .home-content {
+      margin-top: 10%;
+    }
+
+
+   
+.produce-content{
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#moko-content,
+#sleep-content,
+#deepsleep-content,
+#gappi-content ,
+#mimidachi-moko,
+#very-otenba-content,
+#toriming-content,
+#birthday-content,
+#sobad-content,
+#sobadcontent2,
+#badcontent {
+  width: 400px;
+  height: 400px;
+}
+
+.slide {
+  margin: 0 auto;
+  border: 1px solid #0bd;
+  width: 400px;
+  background-color: #0bd;
+}
+
+
+.text-content {
+  font-size: 0.875rem;
+}
+
+
+#cutepoint .page-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#cutepoint h2,
+#toobad h2 {
+  font-size: 1rem;
+}
+
+#cutepoint article {
+  font-size: 0.8rem;
+}
+
+#cutepoint aside,
+#toobad aside {
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+#cutepoint .sub-title,
+#toobad .sub-title {
+font-size: 0.9rem;
+}
+
+#cutepoint p,
+#toobad p {
+  font-size: 0.8rem;
+}
+
+
+#moko-photo {
+  text-align: center;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+
+.countdown-content {
+  font-size: 0.8rem;
+}
+#chiisaimoko,
+#ookikunatta {
+  margin-top: 40px;
+  width: 100px;
+  height: 200px;
+}
+
+#yajirushi {
+  width: 50px;
+  height: 60px;
+}
+
+
+#moko-photo .page-header {
+  background: none;
+}
+
+
+
+#mainphoto {
+ max-width: 100%;
+}
+
+.center {
+  max-width: 95%;
+  width: 400px;
+}
+
+#moko-photo ul {
+  margin-right: 3px;
+  max-width: 80%;
+  text-align: center;
+}
+
+#moko-photo ul img {
+  width: 60px;
+}
+
+#toobad .page-title {
+  font-size: 1.2rem;
+}
+
+#toobad article {
+  font-size: 0.75rem;
+}
+#contact .page-title {
+font-size: 1.5rem; 
+margin-top: 25px; 
+}
+
+
+
+input[type="text"],
+input[type="phone"],
+input[type="email"],
+textarea {
+  max-width: 100%;
+}
+}
+ 
